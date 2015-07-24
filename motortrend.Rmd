@@ -10,11 +10,12 @@ knitr::opts_chunk$set(fig.path='Figs/', warning=FALSE, cache=TRUE)
 require(ggplot2)
 require(plyr)
 ```
-# Synopsis
-This report answers the following questions using data obtained by Motor Trend in 1974
 
-* Is an automatic or manual transmission better for MPG
-* Quantify the MPG difference between automatic and manual transmissions
+# Executive summary of Analysis (a.k.a no technical terms)
+From data collected by Motor Trend in 1974, among cars with **same weight and horsepower**,
+
+1. We can state with **85%** certainity that manual transmission cars have better mileage. However, by generally accepted statistic principles, we require a 95% certainity and hence can not make or publish this claim.
+2. Manual transmission cars can give 0.736 *less* miles per gallon to 4.9 *more* miles per gallon compared to auto transmission cars
 
 # Exploring *mtcars* data
 
@@ -114,9 +115,3 @@ coeff[2,1] + c(-1,1) * coeff[2,2] * qt(0.925, fit3$df)
 ```
 
 For given weight and horse power, manaul transmission car is expected to give 2.08 more miles per gallon compared to a auto transmission car. With 95% confidence we can state that for the population of cars a manual transmission car gives 0.736 *less* miles per gallon to 4.9 *more* miles per gallon compared to automatic transmission car.
-
-# Executive summary (a.k.a no technical terms)
-From the data, among cars with **same weight and horsepower**, we can answer the questions as follows
-
-1. We can state with **85%** certainity that manual transmission cars have better mileage. However, by generally accepted statistic principles, we require a 95% certainity and hence can not make or publish this claim.
-2. Manual transmission cars can give 0.736 *less* miles per gallon to 4.9 *more* miles per gallon compared to auto transmission cars
